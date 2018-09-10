@@ -1,0 +1,55 @@
+.Card
+  display: grid
+  grid-template-columns: 15vw 45vw 
+  height: 150px
+  width: 60vw
+
+  border: 2px solid $purple-h
+  border-radius: 0.5em
+
+  background: $white-h
+
+  .Logo
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    .image
+      height: 100px
+      width: 100px
+      background: url('../img/Logo.png')
+      background-size: cover
+      background-position: center
+    .name
+      color: $white
+      font-family: $primary-font
+      font-size: 1.5em
+      text-align: center
+  
+  .Infos
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    padding: 20px
+    .title
+      color: $white
+      +subtitle
+    .subtitle
+      margin: 5px 0
+      color: $white
+      font-family: $primary-font
+      font-size: 1.2em
+    .invite
+      padding: 10px
+      margin: 10px
+      font-size: 1.1em
+      color: $white
+      font-family: $primary-font
+      background: $cyan-h
+      border: 1px solid $black-h
+      border-radius: .5em
+      transition: all .3s
+      &:hover
+        filter: brightness(110%)
+        transform: scale(1.05)

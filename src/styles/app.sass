@@ -1,11 +1,33 @@
-// UTILITAIRES
-@import 'Utils/Reset.sass'
-@import 'Utils/Colors.sass'
-@import 'Utils/Fonts.sass'
-@import 'Utils/Mixins.sass'
+/*============================
+    Main sass file.
+    Import all other files and sets up general styling for the app.
+    @author Daria <lo.pennequin@gmail.com>
+    ==========================*/
 
-// PAGES
+//UTILITIES
+@import "Utils/Reset.sass"
+@import "Utils/Mixins.sass"
+@import "Utils/Colors.sass"
+@import "Utils/Fonts.sass"
+@import "Utils/Variables.sass"
+@import "Utils/Typography.scss"
+
+//LAYOUT
+
+//SASS ELEMENTS
+@import "Components/Card.sass"
 
 
-// COMPONENTS
-  
+//APP PAGES
+@import "Pages/Container.sass"
+@import "Pages/VideoBackground.sass"
+
+//APP GLOBAL STYLES
+
+html
+    +fluid-typo($min_width, $max_width, $min_font, $max_font)
+
+body
+    font-family: $primary-font
+    font-size: 0.85rem
+    background: $white
